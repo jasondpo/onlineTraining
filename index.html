@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=yes, width=400" />
+    <link rel='stylesheet' href='assets/css/main.css'>
+    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet' type='text/css' />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <title>JCCO Online Training (Beta)</title>
+</head>
+
+<body>
+    <svg id="fader"></svg>
+    <div id='overlay'></div>
+    <div id='header'>
+        <h1>JCCO <span>Online Training System (Beta)</span></h1>
+    </div>
+
+    <div id='signIn_Container'>
+        <h4><span>Welcome</span><br />
+            Please complete form then click 'Start'</h4><br />
+        <input type="text" id="fname" autocomplete="off" placeholder="First name" onkeyup="checkform()"
+            onfocus="if(placeholder=='First name')placeholder=''" onblur="if(placeholder=='')placeholder='First name'">
+        <!-- <br /> -->
+        <input type="text" id="lname" autocomplete="off" placeholder="Last name" placeholder="Last name"
+            onkeyup="checkform()" onfocus="if(placeholder=='Last name')placeholder=''"
+            onblur="if(placeholder=='')placeholder='Last name'">
+
+        <div class="elipseDivider">• • •</div>
+
+        <!-- <label>Department</label> -->
+        <select name="deptSelect" id="deptSelect" onchange="checkform()">
+            <option value="" selected disabled>Select department</option>
+            <option value="finance">Finance</option>
+            <option value="callCenter">Call Center/Processing</option>
+            <option value="communications">Communications</option>
+            <option value="vehicles">Motor Vehicles</option>
+            <option value="resources">Human Resources</option>
+            <option value="dealers">Motor Vehicle Dealers</option>
+            <option value="liens">Motor Vehicle Liens</option>
+            <option value="technology">Information Technology</option>
+            <option value="other">Other</option>
+        </select><br />
+
+        <!-- <label>Position</label> -->
+        <select name="positionSelect" id="positionSelect" onchange="checkform()">
+            <option value="" selected disabled>Select position</option>
+            <option value="director">Director</option>
+            <option value="manager">Manager</option>
+            <option value="assistManager">Assitant Manager</option>
+            <option value="assist">Assitant</option>
+            <option value="clerk">Clerk</option>
+            <option value="csr">CSR</option>
+            <option value="other">Other</option>
+        </select>
+
+        <a href="main.html"> <button id="beginBtn" class="beginBtnLink"><i
+                    class="fas fa-lock"></i>&nbsp;&nbsp;Start</button></a>
+    </div>
+
+    <h3 id="adminBtn">Admin</h3>
+
+    <script src='assets/js/main.js'></script>
+    <script src='assets/js/page_transition.js'></script>
+</body>
+
+</html>
