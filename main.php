@@ -12,14 +12,28 @@
 
 <body>
     <svg id="fader"></svg>
+
+    <div id="signIn-conatainer-admin">
+        <input type="text" autocomplete="off" placeholder="Username" name="Username" id="txtEmail" onfocus="if(placeholder=='Username')placeholder='';this.removeAttribute('readonly')" onblur="if(placeholder=='')placeholder='Username'" readonly required>
+
+
+        <input type="password" placeholder="Password" name="pword" id="txtPassword" onfocus="if(placeholder=='Password')placeholder='';this.removeAttribute('readonly')" onblur="if(placeholder=='')placeholder='Password'" readonly required>
+
+
+        <button id="btnLogin">Login</button><button id="btnSignUp">Sign Up</button><button id="btnLogout"
+            class="hide">Log Out</button>
+    </div>
+
     <div id='overlay'></div>
+
+    
     <div id='header'>
         <h1>JCCO <span>Online Training System (Beta)</span></h1>
         <h2><span id="greet"></span><span id="name"></span></h2>
     </div>
     <div id='dropDown'>
         <ul id="menu">
-            <li id="logOut">Log out</li>
+            <a href="index.php" id="logOutLink"><li id="logOut">Log out</li></a>
             <li id="quit">Quit</li>
             <li id="restart">Restart</li>
         </ul>
@@ -40,7 +54,7 @@
 
     <script>
         if (localStorage.firstName == undefined) {
-            window.location.href = "index.html";
+            window.location.href = "index.php";
         }
         $("#name").html(localStorage.firstName)
     </script>

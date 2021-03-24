@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="user-scalable=yes, width=400" />
-    <link rel='stylesheet' href='assets/css/main.css'>
-    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet' type='text/css' />
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <title>JCCO Online Training (Beta)</title>
-</head>
+<?php include "includes/header.php"; ?>
 
-<body>
-    <svg id="fader"></svg>
-    <div id='overlay'></div>
     <div id='header'>
         <h1>JCCO <span>Online Training System (Beta)</span></h1>
     </div>
@@ -21,10 +8,10 @@
     <div id='signIn_Container'>
         <h4><span>Welcome</span><br />
             Please complete form then click 'Start'</h4><br />
-        <input type="text" id="fname" autocomplete="off" placeholder="First name" onkeyup="checkform()"
-            onfocus="if(placeholder=='First name')placeholder=''" onblur="if(placeholder=='')placeholder='First name'">
-        <!-- <br /> -->
-        <input type="text" id="lname" autocomplete="off" placeholder="Last name" placeholder="Last name"
+        <input type="text" autocomplete="off" id="fname" readonly placeholder="First name" onkeyup="checkform()"
+            onfocus="if(placeholder=='First name')placeholder='';this.removeAttribute('readonly')" onblur="if(placeholder=='')placeholder='First name'" >
+        
+        <input type="text" autocomplete="off" id="lname" placeholder="Last name" placeholder="Last name"
             onkeyup="checkform()" onfocus="if(placeholder=='Last name')placeholder=''"
             onblur="if(placeholder=='')placeholder='Last name'">
 
@@ -56,14 +43,10 @@
             <option value="other">Other</option>
         </select>
 
-        <a href="main.html"> <button id="beginBtn" class="beginBtnLink"><i
+        <a href="main.php"> <button id="beginBtn" class="beginBtnLink"><i
                     class="fas fa-lock"></i>&nbsp;&nbsp;Start</button></a>
     </div>
 
     <h3 id="adminBtn">Admin</h3>
 
-    <script src='assets/js/main.js'></script>
-    <script src='assets/js/page_transition.js'></script>
-</body>
-
-</html>
+<?php include "includes/footer.php"; ?>

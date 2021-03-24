@@ -1,8 +1,19 @@
+:root {
+    --primary: #f2f4f9;
+    --primaryHover: #dde1eb;
+    --accent: #16325C;
+    --grey: #DFDFDF;
+    --success: #139813;
+    --successHover: #19b119;
+    --white: #FFFFFF;
+    --textSoft: #969EB1;
+  }
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: #f2f4f9;
+    background-color:var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +21,7 @@ html, body {
 }
 a{
     text-decoration: none;
-    color: #777;
+    color: var(--accent);
 }
 *:focus {
     outline:0;
@@ -25,7 +36,7 @@ a{
     height: 100%;
     z-index: 999999;
     pointer-events: none;
-    background-color: #f2f4f9;
+    background-color: var(--primary);
     animation-duration: 750ms;
     animation-timing-function: ease-in-out;
   }
@@ -66,7 +77,7 @@ a{
 h1{
     font-size: 19px;
     height: 16px;
-    color: white;
+    color: var(--white);
     letter-spacing: .03em;
     font-weight: 400;
     position: absolute;
@@ -77,12 +88,12 @@ h1 span{
     font-weight: 300 !important;  
 }
 h2{
-    color: white;
+    color: var(--textSoft);
     font-size: 14px;
     padding-top: 10px;
     display: inline-block;
     letter-spacing: .023em;
-    font-weight: 300;
+    font-weight: 400;
     position: absolute;
     height: 30px;
     right: 20px;
@@ -90,6 +101,7 @@ h2{
 h2 #name{
     font-weight: 500;
     cursor: pointer;
+    color: var(--white);
 }
 h2 #name:hover{
     text-decoration: underline;
@@ -98,7 +110,7 @@ h3{
     position: absolute;
     width: 100px;
     height: 14px;
-    color: #999;
+    color: var(--textSoft);
     bottom: 8px;
     font-weight: 400;
     left: 20px;
@@ -107,12 +119,12 @@ h3{
     cursor: pointer;
 }
 h3:hover{
-    color: #666;
+    color: var(--accent);
     text-decoration: underline;
 }
 h4 span{
     font-size: 42px;
-    color: #16325C;
+    color: var(--accent);
     display:inline-block;
     font-weight: 100;
     margin: 0 ;
@@ -123,10 +135,8 @@ h4{
     font-weight: 400;
     margin: 0;
     padding: 0;
-    color: #16325C;
+    color: var(--accent);
 }
-
-/* Index Page */
 #overlay{
     position: fixed;
     z-index: 99;
@@ -138,6 +148,62 @@ h4{
     background-color: rgba(0,0,0,.85);
     backdrop-filter: blur(2px);
 }
+
+/* Sign in Admin STARTS */
+#signIn-conatainer-admin{
+    width: 400px;
+    height: 320px;
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 130px 20px 20px 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    background-image: url(../images/jcco_logo.png);
+    background-repeat: no-repeat;
+    background-position:center 16px;
+    display: none;
+}
+#signIn-conatainer-admin button {
+    background-color: #4CAF50;
+    color: var(--white);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-right: 5%;
+}
+#signIn-conatainer-admin button:last-child{
+    margin-right: 0%;  
+}
+#signIn-conatainer-admin input[type=text], #signIn-conatainer-admin input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    color:var(--accent);
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#signIn-conatainer-admin button:hover {
+    opacity: 0.8;
+}
+#admin{
+    position: absolute;
+    padding: 6px 8px;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--white);
+}
+#signIn-conatainer-admin #btnSignUp{
+    background-color: var(--white) !important;
+    box-sizing: border-box;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    font-weight: 600;
+}
+/* Sign in Admin ENDS */
+
+/* Index Page */
 #signIn_Container {
     position: absolute;
     box-sizing: border-box;
@@ -149,22 +215,23 @@ h4{
     border-radius: 10px;
     overflow: hidden;
     margin-top: 50px;
-    background-color: white;
+    background-color: var(--white);
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 input{
     outline:0px;
     box-sizing: border-box;
+    color:var(--accent);
     font-size: 14px;
     border:0px;
     margin-bottom: 15px;
     letter-spacing: .02em;
     width: 240px;
-    background-color:#f2f4f9;
+    background-color:var(--primary);
     padding: 6px;
 }
 ::placeholder{
-    color: #969EB1;
+    color: var(--textSoft);
     font-weight: 300 !important;
     letter-spacing: .01em;
     font-size: 14px;
@@ -196,16 +263,16 @@ input{
 }
 .beginBtnLink{
     pointer-events: none;
-    background-color:#DFDFDF;
+    background-color:var(--accent);
+    color: var(--white);
 }
 .beginBtnActive{
-    background-color: green;
-    color: white;
+    background-color: var(--success);
     pointer-events: auto !important;
     transition: background-color .1s linear;
 }
 .beginBtnActive:hover{
-    background-color: green;
+    background-color: var(--successHover);
 }
 .beginBtnActive h11{
     color:rgb(0, 41, 0) !important;
@@ -214,7 +281,7 @@ select{
     margin-bottom: 15px;
     width: 240px;
     font-size: 14px;
-    color:#969EB1;
+    color:var(--textSoft);
     height: 28px;
     border-color:#CCC;
 }
@@ -250,7 +317,7 @@ label{
     width: 100%;
     top:0;
     height: 140px;
-    background-color: #16325C;
+    background-color: var(--accent);
     background-image: url(../images/jcco_logo.png);
     background-repeat: no-repeat;
     background-position:center 16px;
@@ -259,7 +326,7 @@ label{
     position: absolute;
     z-index: 20;
     font-size: 14px;
-    color: #777;
+    color: var(--textSoft);
     display: inline-block;
     bottom: 15px;
     right: 20px;
@@ -273,7 +340,7 @@ label{
     width: 90px;
     padding: 12px 0px;
     box-sizing: border-box;
-    background-color:#f2f4f9;
+    background-color:var(--primary);
     border-radius: 6px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
@@ -291,17 +358,16 @@ label{
     cursor: pointer;
     font-weight: 400;
     letter-spacing: .01em;
-    color:#444;
+    color: var(--accent);
     font-size: 14px;
-    background-color: #f2f4f9;
+    background-color: var(--primary);
     transition: background-color .15s linear;
 }
 #dropDown ul li:last-child{
     margin-bottom: 0px;
 }
 #dropDown ul li:hover{
-    background-color: #DFDFDF;
-    color:#000;
+    background-color: var(--primaryHover);
 }
 #triangleUp {
     width: 0;
@@ -311,7 +377,7 @@ label{
     right: 12px;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid #f2f4f9;
+    border-bottom: 8px solid var(--primary);
 }
 #logOut{
     font-weight: 600 !important;
@@ -329,7 +395,7 @@ label{
     }
     #header{
         height: 60px;
-        background-color: #16325C;
+        background-color: var(--accent);
         background-image: url(../images/jcco_logo_45.png);
         background-repeat: no-repeat;
         background-position:20px center;

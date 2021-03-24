@@ -1,10 +1,20 @@
+if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
+    $('input[autocomplete="off"]').each(function () {
+        var type = $(this).attr('type');
+        $(this).attr('type', '_' + type);
+        $(this).attr('type', type);
+    });
+}
+
 //// Admin ////
 $("#adminBtn").click(function () {
     $("#overlay").fadeIn("fast");
+    $("#signIn-conatainer-admin").delay(250).fadeIn("fast")
 })
 
 $("#overlay").click(function () {
-    $("#overlay").fadeOut("fast");
+    $("#overlay").delay(250).fadeOut("fast");
+    $("#signIn-conatainer-admin").fadeOut("fast");
 })
 
 //// Greetings ////
@@ -51,11 +61,6 @@ function saveLocalStorage() {
     localStorage.position = positionSelect;
 }
 
-
-//// Log in admission ////
-
-
-
 //// Current Time
 window.onload = displayClock();
 function displayClock() {
@@ -76,9 +81,8 @@ $('h2, #name, #dropDown, #menu, #triangleUp').mouseover(function (event) {
     event.stopPropagation();
 });
 
-$("#logOut").click(function () {
+$("#logOutLink").click(function () {
     localStorage.clear();
-    window.location.href = "index.html";
 })
 
 /// Refresh Page
