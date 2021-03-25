@@ -12,7 +12,7 @@ $("#adminBtn").click(function () {
     $("#signIn-conatainer-admin").delay(250).fadeIn("fast")
 })
 
-$("#overlay").click(function () {
+$("#overlay, #closeAdminDialogueBox").click(function () {
     $("#overlay").delay(250).fadeOut("fast");
     $("#signIn-conatainer-admin").fadeOut("fast");
 })
@@ -89,3 +89,5 @@ $("#logOutLink").click(function () {
 $('#restart').click(function () {
     location.reload();
 });
+
+/// Score

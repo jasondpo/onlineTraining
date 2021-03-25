@@ -7,7 +7,7 @@
 
     <div id='signIn_Container'>
         <h4><span>Welcome</span><br />
-            Please complete form then click 'Start'</h4><br />
+            Please complete form to unlock 'Start'</h4><br />
         <input type="text" autocomplete="off" id="fname" readonly placeholder="First name" onkeyup="checkform()"
             onfocus="if(placeholder=='First name')placeholder='';this.removeAttribute('readonly')" onblur="if(placeholder=='')placeholder='First name'" >
         
@@ -15,7 +15,7 @@
             onkeyup="checkform()" onfocus="if(placeholder=='Last name')placeholder=''"
             onblur="if(placeholder=='')placeholder='Last name'">
 
-        <div class="elipseDivider">• • •</div>
+        <hr>
 
         <!-- <label>Department</label> -->
         <select name="deptSelect" id="deptSelect" onchange="checkform()">

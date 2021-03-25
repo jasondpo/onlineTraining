@@ -7,6 +7,7 @@
     --successHover: #19b119;
     --white: #FFFFFF;
     --textSoft: #969EB1;
+    --rule:#DDD;
   }
 
 html, body {
@@ -145,17 +146,31 @@ h4{
     right:0;
     bottom:0;
     display: none;
-    background-color: rgba(0,0,0,.85);
+    background-color: rgba(0,0,0,.75);
     backdrop-filter: blur(2px);
 }
 
 /* Sign in Admin STARTS */
+#closeAdminDialogueBox{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: black;
+    right: -8px;
+    top:-8px;
+    background-image: url(../images/icon_close.png);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
 #signIn-conatainer-admin{
-    width: 400px;
-    height: 320px;
+    position: relative;
+    width: 300px;
+    height: 340px;
     z-index: 100;
     box-sizing: border-box;
-    padding: 130px 20px 20px 20px;
+    padding: 108px 20px 20px 20px;
     background-color: var(--white);
     border-radius: 8px;
     background-image: url(../images/jcco_logo.png);
@@ -163,14 +178,19 @@ h4{
     background-position:center 16px;
     display: none;
 }
+#signIn-conatainer-admin h4{
+    text-align: center;
+    padding-bottom: 10px;
+}
 #signIn-conatainer-admin button {
-    background-color: #4CAF50;
+    background-color: var(--accent);
     color: var(--white);
-    padding: 14px 20px;
+    padding: 14px 10px;
+    border-radius: 6px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 30%;
+    width: 100px;
     margin-right: 5%;
 }
 #signIn-conatainer-admin button:last-child{
@@ -190,16 +210,22 @@ h4{
 #admin{
     position: absolute;
     padding: 6px 8px;
-    bottom: 20px;
+    bottom: 18px;
     right: 20px;
     background-color: var(--white);
 }
-#signIn-conatainer-admin #btnSignUp{
+/* Adjust these two buttons during testing */
+#signIn-conatainer-admin #btnSignUp, #signIn-conatainer-admin #btnLogout{ 
     background-color: var(--white) !important;
     box-sizing: border-box;
     border: 2px solid #4CAF50;
     color: #4CAF50;
     font-weight: 600;
+    display: none;
+}
+#signIn-conatainer-admin #btnLogin{
+    width: 260px !important;
+    margin-top: 24px !important;
 }
 /* Sign in Admin ENDS */
 
@@ -223,12 +249,19 @@ input{
     box-sizing: border-box;
     color:var(--accent);
     font-size: 14px;
-    border:0px;
-    margin-bottom: 15px;
+    border:1px solid var(--primary);
     letter-spacing: .02em;
     width: 240px;
     background-color:var(--primary);
     padding: 6px;
+    transition: background-color .15s linear;
+}
+#fname{
+    margin-bottom: 15px;
+}
+
+input:hover{
+    border:1px solid var(--primaryHover);
 }
 ::placeholder{
     color: var(--textSoft);
@@ -236,15 +269,14 @@ input{
     letter-spacing: .01em;
     font-size: 14px;
 }
-.elipseDivider{
-    height: 4px;
-    width: 100%; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin-bottom: 15px;
-    color: #CCC;
+hr{
+    width: 240px;
+    border-width:0;
+    border-top: 1px solid var(--rule);
+    margin-top: 18px;
+    margin-bottom: 18px;
 }
+
 #beginBtn{
     width: 240px;
     height: 36px;
