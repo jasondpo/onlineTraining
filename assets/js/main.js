@@ -91,3 +91,9 @@ $('#restart').click(function () {
 });
 
 /// Score
+
+/// Test Function
+
+function testFunction() {
+    alert("I am the test function.")
+}
