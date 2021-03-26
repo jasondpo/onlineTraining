@@ -1,11 +1,54 @@
 :root {
-    --primary: #f2f4f9;
-    --primaryHover: #dde1eb;
-    --accent: #16325C;
-    --grey: #DFDFDF;
-    --success: #139813;
-    --successHover: #19b119;
-    --white: #FFFFFF;
-    --textSoft: #969EB1;
-    --rule:#DDD;
-  }
+  --primary: #f2f4f9;
+  --primaryHover: #dde1eb;
+  --accent: #16325C;
+  --grey: #DFDFDF;
+  --success: #139813;
+  --successHover: #19b119;
+  --white: #FFFFFF;
+  --textSoft: #969EB1;
+  --rule:#DDD;
+}
+
+#admin-nav-container{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  left:50%;
+  margin-left: -400px;
+  top:140px;
+  width: 800px;
+  height: 60px;
+  border-bottom: 1px solid var(--textSoft);
+}
+.admin-nav-tab{
+  box-sizing: border-box;
+  text-align: center;
+  padding-bottom: 7px;
+  width: 100px;
+  height: 63px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--textSoft);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  letter-spacing: .02em;
+  cursor: pointer;
+}
+.admin-nav-tab:hover{
+  color: var(--accent);
+}
+.admin-nav-tab-active{
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 4px;
+}
+#userRespons-container{
+  position: absolute;
+  top:250px;
+  width: 800px;
+  box-sizing: border-box;
+  color: var(--accent);
+}

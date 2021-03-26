@@ -1,3 +1,17 @@
+
+// Admin page navigation
+$(".admin-nav-tab").click(function(){
+    if($(this).attr("id")=="allUsers"){
+        $("#allUsers").addClass("admin-nav-tab-active");
+        $("#curUser").removeClass("admin-nav-tab-active");
+    }else if($(this).attr("id")=="curUser"){
+        $("#allUsers").removeClass("admin-nav-tab-active");
+        $("#curUser").addClass("admin-nav-tab-active");
+    }
+});
+
+
+// Firebase Code
 (function(){
 
     // Your web app's Firebase configuration

@@ -1,12 +1,4 @@
-if (navigator.userAgent.toLowerCase().indexOf('chrome') >= 0) {
-    $('input[autocomplete="off"]').each(function () {
-        var type = $(this).attr('type');
-        $(this).attr('type', '_' + type);
-        $(this).attr('type', type);
-    });
-}
-
-//// Admin ////
+// Admin ////
 $("#adminBtn").click(function () {
     $("#overlay").fadeIn("fast");
     $("#signIn-conatainer-admin").delay(250).fadeIn("fast")
@@ -62,10 +54,13 @@ function saveLocalStorage() {
 }
 
 //// Current Time
+var curTime =  document.getElementById("currentTime");
 window.onload = displayClock();
 function displayClock() {
     var currentTime = new Date().toLocaleTimeString();
-    document.getElementById("currentTime").innerHTML = currentTime;
+    if(curTime){
+        curTime.innerHTML = currentTime;
+    }
     setTimeout(displayClock, 1000);
 }
 
@@ -73,6 +68,7 @@ function displayClock() {
 $("#name").click(function () {
     $("#dropDown").toggle();
 })
+
 $(window).mouseover(function () {
     setTimeout(function () { $("#dropDown").fadeOut("fast"); }, 250)
 });

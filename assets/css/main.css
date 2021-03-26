@@ -3,11 +3,11 @@ DIRECTORY
 	
 .AA Global
 
-.01 XXXXXXX
+.01 Administrator
 
-.02 XXXXXXX
+.02 Index
 
-.03 XXXXXXX
+.03 Main
 
 .04 XXXXXXX
 
@@ -17,30 +17,6 @@ DIRECTORY
 --------------------------------------------------------------*/	
 /*--------------------------------------------------------------
 .AA GLOBAL STARTS
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-.01 XXXXXXX
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-.02 XXXXXXX
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-.03 XXXXXXX
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-.04 XXXXXXX
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-.05 XXXXXXX
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-.XX RESPONSIVE 
 --------------------------------------------------------------*/
 :root {
     --primary: #f2f4f9;
@@ -72,53 +48,6 @@ a{
     outline:0;
     outline:none;
 }
- /* Page Transition STARTS  */
-#fader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999999;
-    pointer-events: none;
-    background-color: var(--primary);
-    animation-duration: 750ms;
-    animation-timing-function: ease-in-out;
-  }
-  @keyframes fade-out {
-  from { opacity: 1 }
-  to { opacity: 0 }
-  }
-  
-  @keyframes fade-in {
-    from { opacity: 0 }
-    to { opacity: 1 }
-  }
-  
-  #fader.fade-out {
-    opacity: 0;
-    animation-name: fade-out;
-  }
-  
-  #fader.fade-in {
-    opacity: 1;
-    animation-name: fade-in;
-  }
-
- /* Animation */
-@keyframes fadeIn {
-	from {
-        opacity: 0;
-        transform: translateY(-200px);
-
-	}
-	100% {
-        opacity: 1;
-        transform: translateY(0px);
-	}
-}
- /* Page Transition ENDS  */
-
 h1{
     font-size: 19px;
     height: 16px;
@@ -182,6 +111,56 @@ h4{
     padding: 0;
     color: var(--accent);
 }
+/* Page Transition STARTS  */
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+    background-color: var(--primary);
+    animation-duration: 750ms;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes fade-out {
+  from { opacity: 1 }
+  to { opacity: 0 }
+  }
+  
+  @keyframes fade-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  
+  #fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+  }
+  
+  #fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+  }
+
+ /* Animation */
+@keyframes fadeIn {
+	from {
+        opacity: 0;
+        transform: translateY(-200px);
+
+	}
+	100% {
+        opacity: 1;
+        transform: translateY(0px);
+	}
+}
+ /* Page Transition ENDS  */
+ 
+/*--------------------------------------------------------------
+.01 Administrator
+--------------------------------------------------------------*/
 #overlay{
     position: fixed;
     z-index: 99;
@@ -193,7 +172,6 @@ h4{
     background-color: rgba(0,0,0,.75);
     backdrop-filter: blur(2px);
 }
-
 /* Sign in Admin STARTS */
 #closeAdminDialogueBox{
     position: absolute;
@@ -274,8 +252,9 @@ h4{
     margin-top: 24px !important;
 }
 /* Sign in Admin ENDS */
-
-/* Index Page */
+/*--------------------------------------------------------------
+.02 Index
+--------------------------------------------------------------*/
 #signIn_Container {
     position: absolute;
     box-sizing: border-box;
@@ -374,8 +353,9 @@ label{
     color: #BBB;
     margin-bottom: 6px;
 }
-
-/* Main Page */
+/*--------------------------------------------------------------
+.03 Main
+--------------------------------------------------------------*/
 #hypeContainer {
     position: absolute;
     z-index: 1;
@@ -461,6 +441,17 @@ label{
     font-weight: 600 !important;
 }
 
+/*--------------------------------------------------------------
+.04 XXXXXXX
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+.05 XXXXXXX
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+.XX RESPONSIVE 
+--------------------------------------------------------------*/
 @media all and (max-height:800px) {  
     #hypeContainer {
         margin-top: 100px;
@@ -481,4 +472,12 @@ label{
     h1{
         bottom: 11px;
     }
+    #admin-nav-container{
+        top:60px;
+    }
+    #userRespons-container{
+        top:170px;
+      }
 }
+
+

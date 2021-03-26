@@ -12,6 +12,7 @@
         </ul>
         <div id='triangleUp'></div>
     </div>
+    
     <div id="hypeContainer">
         <!-- copy these lines to your document: -->
         <div id="laurenmichael_hype_container" class="HYPE_document"
@@ -31,8 +32,5 @@
         }
         $("#name").html(localStorage.firstName)
     </script>
-    <script src='assets/js/main.js'></script>
-    <script src='assets/js/page_transition.js'></script>
-</body>
 
-</html>
+<?php include "includes/footer.php"; ?>
