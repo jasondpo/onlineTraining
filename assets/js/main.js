@@ -54,11 +54,11 @@ function saveLocalStorage() {
 }
 
 //// Current Time
-var curTime =  document.getElementById("currentTime");
+var curTime = document.getElementById("currentTime");
 window.onload = displayClock();
 function displayClock() {
     var currentTime = new Date().toLocaleTimeString();
-    if(curTime){
+    if (curTime) {
         curTime.innerHTML = currentTime;
     }
     setTimeout(displayClock, 1000);
@@ -89,7 +89,8 @@ $('#restart').click(function () {
 /// Score
 
 /// Test Function
-
 function testFunction() {
     alert("I am the test function.")
 }
+
+/// Right Slide Button

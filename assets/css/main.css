@@ -367,6 +367,17 @@ label{
     background-color: #CCC;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+#slideNumber{
+    position: absolute;
+    z-index: 2;
+    width: 100px;
+    height: 20px;
+    background-color: #f90;
+    top: 50%;
+    margin-top: -265px;
+    left:50%;
+    margin-left: -400px;   
+}
 #header{
     position: fixed;
     z-index: 2;
@@ -379,6 +390,24 @@ label{
     background-image: url(../images/jcco_logo.png);
     background-repeat: no-repeat;
     background-position:center 16px;
+}
+#leftSlideBtn{
+    left: 50%;
+    margin-left: -475px;
+}
+#rightSlideBtn{
+    right: 50%;
+    margin-right: -475px;
+}
+.slideBtnClass{
+    position: absolute;
+    margin-top: -10px;
+    z-index: 2;
+    top:50%;
+    cursor: pointer;
+    width: 50px;
+    height: 20px;
+    background-color: var(--textSoft);  
 }
 #currentTime{
     position: absolute;

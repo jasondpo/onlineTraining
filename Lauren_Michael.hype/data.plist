@@ -11,7 +11,7 @@
 	<key>createOfflineApplicationCache</key>
 	<false/>
 	<key>currentSceneContainer</key>
-	<string>30</string>
+	<string>1</string>
 	<key>customExportSlices</key>
 	<array>
 		<dict>
@@ -94,13 +94,13 @@
 /* 	background-color:#f90 !important; */
 	}
 	&lt;/style&gt;
-	</string>
+</string>
 	<key>lastCheckDate</key>
-	<date>2021-03-26T01:58:03Z</date>
+	<date>2021-03-29T09:02:09Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
-		<integer>3</integer>
+		<integer>5</integer>
 		<key>customizableLayout</key>
 		<dict>
 			<key>frame</key>
@@ -242,16 +242,28 @@
 		<key>keyframeTimelineHeight</key>
 		<real>185</real>
 		<key>mainWindowFrame</key>
-		<string>1945 78 1895 1003 1920 33 1920 1055 </string>
+		<string>1920 85 1895 1003 1920 33 1920 1055 </string>
 		<key>openTabs</key>
 		<array>
 			<dict>
 				<key>className</key>
 				<string>HeadHTMLEditor</string>
 			</dict>
+			<dict>
+				<key>className</key>
+				<string>HypeJavascript</string>
+				<key>oid</key>
+				<string>95</string>
+			</dict>
+			<dict>
+				<key>className</key>
+				<string>HypeJavascript</string>
+				<key>oid</key>
+				<string>96</string>
+			</dict>
 		</array>
 		<key>selectedTabIndex</key>
-		<integer>0</integer>
+		<integer>3</integer>
 		<key>showInspectorView</key>
 		<true/>
 		<key>showResourcesView</key>
@@ -291,7 +303,7 @@
 	<key>monotypeProjectID</key>
 	<string>65EC8E5A-5E64-4634-9BF3-7CA94F12548D-98017-00011AA31F46EDC0</string>
 	<key>oidCounter</key>
-	<integer>94</integer>
+	<integer>96</integer>
 	<key>pageTitle</key>
 	<string></string>
 	<key>resourcesInfo</key>
@@ -945,13 +957,13 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>6</real>
+							<real>0.0</real>
 						</dict>
 						<key>timescale</key>
 						<integer>90</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1483, 734}</string>
+					<string>{1982, 707}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -976,7 +988,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>2</string>
 					<key>scrollViewOffset</key>
-					<string>{10, 0}</string>
+					<string>{0, 0}</string>
 					<key>userGuides</key>
 					<array/>
 				</dict>
@@ -986,7 +998,7 @@
 			<key>currentSceneOid</key>
 			<string>32</string>
 			<key>name</key>
-			<string>Rolls down window</string>
+			<string>Scene2</string>
 			<key>oid</key>
 			<string>30</string>
 			<key>scenes</key>
@@ -1003,7 +1015,7 @@
 						<integer>120</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1488, 568}</string>
+					<string>{1480, 568}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -1028,7 +1040,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>31</string>
 					<key>scrollViewOffset</key>
-					<string>{15, 2}</string>
+					<string>{0, 11}</string>
 				</dict>
 			</array>
 		</dict>
@@ -1238,7 +1250,41 @@
 	<key>sceneExportSlicesBySceneContainerOid</key>
 	<dict/>
 	<key>scripts</key>
-	<array/>
+	<array>
+		<dict>
+			<key>oid</key>
+			<string>95</string>
+			<key>source</key>
+			<string>// element - DOMHTMLElement that triggered this function being called
+// event - event that triggered this function being called
+function findName(hypeDocument, element, event) {
+	
+		alert(hypeDocument.documentName());
+		alert(hypeDocument.sceneNames().length);
+		var sceneNumber = sceneElement.getAttribute('hype_scene_index');
+		alert(sceneNumber)
+	
+}
+</string>
+		</dict>
+		<dict>
+			<key>oid</key>
+			<string>96</string>
+			<key>source</key>
+			<string>// element - DOMHTMLElement that triggered this function being called
+// event - event that triggered this function being called
+function totalSlides(hypeDocument, element, event) {
+	
+// 		alert(hypeDocument.sceneNames().length);
+
+		var curNo = hypeDocument.sceneNames().length;
+		document.getElementById("totalNo").innerHTML=curNo;
+
+	
+}
+</string>
+		</dict>
+	</array>
 	<key>shouldApplySizeChangesToAllScenes</key>
 	<true/>
 	<key>showAnyTimelineCompleteActionHandler</key>
@@ -1255,7 +1301,7 @@
 	<array>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array/>
 			<key>symbol</key>
@@ -1672,9 +1718,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TextColor</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>#000</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1810,18 +1856,18 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>TextColor</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>#000</string>
 						</dict>
 					</array>
 					<key>6</key>
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>1495px</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -1939,9 +1985,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>1495px</string>
 						</dict>
 					</array>
 				</dict>
@@ -2116,6 +2162,12 @@
 												<string>kTimelineDefaultIdentifier</string>
 												<key>type</key>
 												<integer>7</integer>
+											</dict>
+											<dict>
+												<key>javascriptOid</key>
+												<string>96</string>
+												<key>type</key>
+												<integer>4</integer>
 											</dict>
 										</array>
 									</dict>
@@ -3346,7 +3398,7 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array>
 				<string>15</string>
@@ -3488,9 +3540,9 @@
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>120px</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -3614,18 +3666,18 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>120px</string>
 						</dict>
 					</array>
 					<key>15</key>
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>121.5px</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -3743,9 +3795,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>121.5px</string>
 						</dict>
 					</array>
 				</dict>
@@ -4084,9 +4136,11 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
-			<array/>
+			<array>
+				<string>54</string>
+			</array>
 			<key>symbol</key>
 			<dict>
 				<key>addToNewSceneControllers</key>
@@ -5005,9 +5059,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TextColor</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>#000</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -5143,9 +5197,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>TextColor</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>#000</string>
 						</dict>
 					</array>
 					<key>54</key>
@@ -5362,14 +5416,10 @@
 								<key>actions</key>
 								<array>
 									<dict>
-										<key>duration</key>
-										<real>1.1000000000000001</real>
-										<key>sceneOid</key>
-										<string>56</string>
-										<key>transition</key>
-										<integer>1</integer>
+										<key>javascriptOid</key>
+										<string>95</string>
 										<key>type</key>
-										<integer>1</integer>
+										<integer>4</integer>
 									</dict>
 								</array>
 							</dict>
@@ -5576,9 +5626,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>ZIndex</string>
+							<string>DomID</string>
 							<key>objectValue</key>
-							<string>8</string>
+							<string>blueBox</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -5588,19 +5638,13 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
+							<string>ZIndex</string>
+							<key>objectValue</key>
+							<string>8</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
 							<string>PaddingLeft</string>
-							<key>objectValue</key>
-							<string>27px</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
-							<string>DomID</string>
-							<key>objectValue</key>
-							<string>blueBox</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
-							<string>PaddingTop</string>
 							<key>objectValue</key>
 							<string>27px</string>
 						</dict>
@@ -5609,6 +5653,12 @@
 							<string>TagName</string>
 							<key>objectValue</key>
 							<string>div</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>PaddingTop</string>
+							<key>objectValue</key>
+							<string>27px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -6699,7 +6749,7 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array/>
 			<key>symbol</key>
@@ -6716,9 +6766,9 @@
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>367.5px</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -6816,15 +6866,15 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>BackgroundSize</string>
-							<key>objectValue</key>
-							<string>100% 100%</string>
-						</dict>
-						<dict>
-							<key>identifier</key>
 							<string>Overflow</string>
 							<key>objectValue</key>
 							<string>visible</string>
+						</dict>
+						<dict>
+							<key>identifier</key>
+							<string>BackgroundSize</string>
+							<key>objectValue</key>
+							<string>100% 100%</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -6840,9 +6890,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>367.5px</string>
+							<string>div</string>
 						</dict>
 					</array>
 				</dict>
@@ -6956,7 +7006,7 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array/>
 			<key>symbol</key>
@@ -7219,9 +7269,9 @@
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>654.75px</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -7339,9 +7389,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>654.75px</string>
 						</dict>
 					</array>
 					<key>62</key>
@@ -7580,9 +7630,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>TextColor</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>#000</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -7718,9 +7768,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TextColor</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>#000</string>
+							<string>div</string>
 						</dict>
 					</array>
 				</dict>
@@ -8143,7 +8193,7 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array>
 				<string>71</string>
@@ -8162,9 +8212,9 @@
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>1495px</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -8282,9 +8332,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>1495px</string>
 						</dict>
 					</array>
 					<key>71</key>
@@ -8691,9 +8741,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>TextColor</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>#000</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -8829,9 +8879,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TextColor</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>#000</string>
+							<string>div</string>
 						</dict>
 					</array>
 				</dict>
@@ -9143,7 +9193,7 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array/>
 			<key>symbol</key>
@@ -9640,9 +9690,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TextColor</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>#000</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -9778,9 +9828,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>TextColor</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>#000</string>
 						</dict>
 					</array>
 					<key>82</key>
@@ -10369,9 +10419,9 @@
 					<array>
 						<dict>
 							<key>identifier</key>
-							<string>OriginalWidth</string>
+							<string>TagName</string>
 							<key>objectValue</key>
-							<string>654.75px</string>
+							<string>div</string>
 						</dict>
 						<dict>
 							<key>identifier</key>
@@ -10489,9 +10539,9 @@
 						</dict>
 						<dict>
 							<key>identifier</key>
-							<string>TagName</string>
+							<string>OriginalWidth</string>
 							<key>objectValue</key>
-							<string>div</string>
+							<string>654.75px</string>
 						</dict>
 					</array>
 				</dict>
@@ -10957,7 +11007,7 @@
 		</dict>
 		<dict>
 			<key>documentIdentifier</key>
-			<string>45DC3167-6BF1-4AAA-B14C-A25C59DC023D-13818-000037186EECB64F</string>
+			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
 			<array/>
 			<key>symbol</key>
