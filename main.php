@@ -28,10 +28,10 @@
         <!-- end copy -->
     </div>
 
-    <div id='leftSlideBtn' class="slideBtnClass" onclick ="HYPE.documents['Lauren_Michael'].showPreviousScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
+    <div id='backSlideBtn' class="slideBtnClass crossed" onclick ="HYPE.documents['Lauren_Michael'].showPreviousScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
 
     </div>
-    <div id='rightSlideBtn' class="slideBtnClass" onclick ="HYPE.documents['Lauren_Michael'].showNextScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
+    <div id='forwardSlideBtn' class="slideBtnClass crossed" onclick ="HYPE.documents['Lauren_Michael'].showNextScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
 
     </div>
 

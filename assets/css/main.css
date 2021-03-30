@@ -391,13 +391,16 @@ label{
     background-repeat: no-repeat;
     background-position:center 16px;
 }
-#leftSlideBtn{
+#backSlideBtn{
     left: 50%;
     margin-left: -475px;
+    background-image: url(../images/backBtn.png);
+    background-position: bottom;
 }
-#rightSlideBtn{
+#forwardSlideBtn{
     right: 50%;
     margin-right: -475px;
+    background-image: url(../images/nextBtn.png);
 }
 .slideBtnClass{
     position: absolute;
@@ -407,7 +410,9 @@ label{
     cursor: pointer;
     width: 50px;
     height: 20px;
-    background-color: var(--textSoft);  
+}
+.crossed{
+    cursor: not-allowed;
 }
 #currentTime{
     position: absolute;
