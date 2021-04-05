@@ -14,7 +14,7 @@
     </div>
     
 <div id='slideNumber'>
-    <span id="currentNo"></span> of <span id="totalNo"></span>
+    Question <span id="currentNo" class="slideNumberClass"></span> of <span id="totalNo" class="slideNumberClass"></span>
 </div>
 
     <div id="hypeContainer">
@@ -28,10 +28,10 @@
         <!-- end copy -->
     </div>
 
-    <div id='backSlideBtn' class="slideBtnClass crossed" onclick ="HYPE.documents['Lauren_Michael'].showPreviousScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
+    <div id='backSlideBtn' class="slideBtnClass" onclick ="HYPE.documents['Lauren_Michael'].showPreviousScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
 
     </div>
-    <div id='forwardSlideBtn' class="slideBtnClass crossed" onclick ="HYPE.documents['Lauren_Michael'].showNextScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
+    <div id='forwardSlideBtn' class="slideBtnClass" onclick ="HYPE.documents['Lauren_Michael'].showNextScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
 
     </div>
 

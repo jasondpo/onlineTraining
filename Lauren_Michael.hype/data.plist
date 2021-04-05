@@ -11,7 +11,7 @@
 	<key>createOfflineApplicationCache</key>
 	<false/>
 	<key>currentSceneContainer</key>
-	<string>1</string>
+	<string>85</string>
 	<key>customExportSlices</key>
 	<array>
 		<dict>
@@ -96,7 +96,7 @@
 	&lt;/style&gt;
 </string>
 	<key>lastCheckDate</key>
-	<date>2021-03-29T09:02:09Z</date>
+	<date>2021-04-03T22:31:45Z</date>
 	<key>layout</key>
 	<dict>
 		<key>currentInspectorPane</key>
@@ -104,7 +104,7 @@
 		<key>customizableLayout</key>
 		<dict>
 			<key>frame</key>
-			<string>{{0, 0}, {1895, 953}}</string>
+			<string>{{0, 0}, {1895, 975}}</string>
 			<key>identifier</key>
 			<string>container 93</string>
 			<key>isCustomizableViewContainer</key>
@@ -117,9 +117,9 @@
 			<array>
 				<dict>
 					<key>frame</key>
-					<string>{{0, 0}, {1624, 953}}</string>
+					<string>{{0, 0}, {1624, 975}}</string>
 					<key>identifier</key>
-					<string>container 602</string>
+					<string>container 119</string>
 					<key>isCustomizableViewContainer</key>
 					<true/>
 					<key>isCustomizableViewWrapper</key>
@@ -130,85 +130,123 @@
 					<array>
 						<dict>
 							<key>frame</key>
-							<string>{{0, 0}, {135, 953}}</string>
+							<string>{{0, 0}, {1353, 975}}</string>
 							<key>identifier</key>
-							<string>container 597</string>
+							<string>container 602</string>
 							<key>isCustomizableViewContainer</key>
 							<true/>
 							<key>isCustomizableViewWrapper</key>
-							<true/>
+							<false/>
 							<key>isVertical</key>
 							<true/>
 							<key>subviews</key>
 							<array>
 								<dict>
 									<key>frame</key>
-									<string>{{0, 0}, {135, 953}}</string>
+									<string>{{0, 0}, {135, 975}}</string>
 									<key>identifier</key>
-									<string>sceneSelectorCustomizableContainer</string>
+									<string>container 597</string>
 									<key>isCustomizableViewContainer</key>
+									<true/>
+									<key>isCustomizableViewWrapper</key>
+									<true/>
+									<key>isVertical</key>
+									<true/>
+									<key>subviews</key>
+									<array>
+										<dict>
+											<key>frame</key>
+											<string>{{0, 0}, {135, 975}}</string>
+											<key>identifier</key>
+											<string>sceneSelectorCustomizableContainer</string>
+											<key>isCustomizableViewContainer</key>
+											<false/>
+										</dict>
+									</array>
+								</dict>
+								<dict>
+									<key>frame</key>
+									<string>{{136, 0}, {1217, 975}}</string>
+									<key>identifier</key>
+									<string>container 600</string>
+									<key>isCustomizableViewContainer</key>
+									<true/>
+									<key>isCustomizableViewWrapper</key>
 									<false/>
+									<key>isVertical</key>
+									<false/>
+									<key>subviews</key>
+									<array>
+										<dict>
+											<key>frame</key>
+											<string>{{136, 0}, {1217, 414}}</string>
+											<key>identifier</key>
+											<string>container 599</string>
+											<key>isCustomizableViewContainer</key>
+											<true/>
+											<key>isCustomizableViewWrapper</key>
+											<true/>
+											<key>isVertical</key>
+											<true/>
+											<key>subviews</key>
+											<array>
+												<dict>
+													<key>frame</key>
+													<string>{{136, 0}, {1217, 414}}</string>
+													<key>identifier</key>
+													<string>timelineCustomizableContainer</string>
+													<key>isCustomizableViewContainer</key>
+													<false/>
+												</dict>
+											</array>
+										</dict>
+										<dict>
+											<key>frame</key>
+											<string>{{136, 415}, {1217, 560}}</string>
+											<key>identifier</key>
+											<string>container 598</string>
+											<key>isCustomizableViewContainer</key>
+											<true/>
+											<key>isCustomizableViewWrapper</key>
+											<true/>
+											<key>isVertical</key>
+											<true/>
+											<key>subviews</key>
+											<array>
+												<dict>
+													<key>frame</key>
+													<string>{{136, 415}, {1217, 560}}</string>
+													<key>identifier</key>
+													<string>sceneEditorCustomizableContainer</string>
+													<key>isCustomizableViewContainer</key>
+													<false/>
+												</dict>
+											</array>
+										</dict>
+									</array>
 								</dict>
 							</array>
 						</dict>
 						<dict>
 							<key>frame</key>
-							<string>{{136, 0}, {1488, 953}}</string>
+							<string>{{1354, 0}, {270, 975}}</string>
 							<key>identifier</key>
-							<string>container 600</string>
+							<string>container 601</string>
 							<key>isCustomizableViewContainer</key>
 							<true/>
 							<key>isCustomizableViewWrapper</key>
-							<false/>
+							<true/>
 							<key>isVertical</key>
-							<false/>
+							<true/>
 							<key>subviews</key>
 							<array>
 								<dict>
 									<key>frame</key>
-									<string>{{136, 0}, {1488, 392}}</string>
+									<string>{{1354, 0}, {270, 975}}</string>
 									<key>identifier</key>
-									<string>container 599</string>
+									<string>inspectorCustomizableContainer</string>
 									<key>isCustomizableViewContainer</key>
-									<true/>
-									<key>isCustomizableViewWrapper</key>
-									<true/>
-									<key>isVertical</key>
-									<true/>
-									<key>subviews</key>
-									<array>
-										<dict>
-											<key>frame</key>
-											<string>{{136, 0}, {1488, 392}}</string>
-											<key>identifier</key>
-											<string>timelineCustomizableContainer</string>
-											<key>isCustomizableViewContainer</key>
-											<false/>
-										</dict>
-									</array>
-								</dict>
-								<dict>
-									<key>frame</key>
-									<string>{{136, 393}, {1488, 560}}</string>
-									<key>identifier</key>
-									<string>container 598</string>
-									<key>isCustomizableViewContainer</key>
-									<true/>
-									<key>isCustomizableViewWrapper</key>
-									<true/>
-									<key>isVertical</key>
-									<true/>
-									<key>subviews</key>
-									<array>
-										<dict>
-											<key>frame</key>
-											<string>{{136, 393}, {1488, 560}}</string>
-											<key>identifier</key>
-											<string>sceneEditorCustomizableContainer</string>
-											<key>isCustomizableViewContainer</key>
-											<false/>
-										</dict>
-									</array>
+									<false/>
 								</dict>
 							</array>
 						</dict>
@@ -216,9 +254,9 @@
 				</dict>
 				<dict>
 					<key>frame</key>
-					<string>{{1625, 0}, {270, 953}}</string>
+					<string>{{1625, 0}, {270, 975}}</string>
 					<key>identifier</key>
-					<string>container 601</string>
+					<string>container 118</string>
 					<key>isCustomizableViewContainer</key>
 					<true/>
 					<key>isCustomizableViewWrapper</key>
@@ -229,9 +267,9 @@
 					<array>
 						<dict>
 							<key>frame</key>
-							<string>{{1625, 0}, {270, 953}}</string>
+							<string>{{1625, 0}, {270, 975}}</string>
 							<key>identifier</key>
-							<string>inspectorCustomizableContainer</string>
+							<string>resourcesCustomizableContainer</string>
 							<key>isCustomizableViewContainer</key>
 							<false/>
 						</dict>
@@ -242,32 +280,15 @@
 		<key>keyframeTimelineHeight</key>
 		<real>185</real>
 		<key>mainWindowFrame</key>
-		<string>1920 85 1895 1003 1920 33 1920 1055 </string>
+		<string>11 52 1895 1003 0 0 1920 1055 </string>
 		<key>openTabs</key>
-		<array>
-			<dict>
-				<key>className</key>
-				<string>HeadHTMLEditor</string>
-			</dict>
-			<dict>
-				<key>className</key>
-				<string>HypeJavascript</string>
-				<key>oid</key>
-				<string>95</string>
-			</dict>
-			<dict>
-				<key>className</key>
-				<string>HypeJavascript</string>
-				<key>oid</key>
-				<string>96</string>
-			</dict>
-		</array>
+		<array/>
 		<key>selectedTabIndex</key>
-		<integer>3</integer>
+		<integer>0</integer>
 		<key>showInspectorView</key>
 		<true/>
 		<key>showResourcesView</key>
-		<false/>
+		<true/>
 		<key>showSceneSelectorView</key>
 		<true/>
 		<key>showSceneVariantSelectorView</key>
@@ -303,7 +324,7 @@
 	<key>monotypeProjectID</key>
 	<string>65EC8E5A-5E64-4634-9BF3-7CA94F12548D-98017-00011AA31F46EDC0</string>
 	<key>oidCounter</key>
-	<integer>96</integer>
+	<integer>98</integer>
 	<key>pageTitle</key>
 	<string></string>
 	<key>resourcesInfo</key>
@@ -963,7 +984,7 @@
 						<integer>90</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1982, 707}</string>
+					<string>{1974, 707}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -988,7 +1009,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>2</string>
 					<key>scrollViewOffset</key>
-					<string>{0, 0}</string>
+					<string>{8, 16}</string>
 					<key>userGuides</key>
 					<array/>
 				</dict>
@@ -1009,13 +1030,13 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>4.5333333015441895</real>
+							<real>1.6000000238418579</real>
 						</dict>
 						<key>timescale</key>
 						<integer>120</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1480, 568}</string>
+					<string>{1209, 568}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -1040,7 +1061,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>31</string>
 					<key>scrollViewOffset</key>
-					<string>{0, 11}</string>
+					<string>{0, 16}</string>
 				</dict>
 			</array>
 		</dict>
@@ -1065,7 +1086,7 @@
 						<integer>60</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1480, 620}</string>
+					<string>{1209, 568}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -1090,7 +1111,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>75</string>
 					<key>scrollViewOffset</key>
-					<string>{0, 0}</string>
+					<string>{0, 14}</string>
 				</dict>
 			</array>
 		</dict>
@@ -1109,13 +1130,13 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>4.5</real>
+							<real>0.0</real>
 						</dict>
 						<key>timescale</key>
 						<integer>100</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1489, 620}</string>
+					<string>{1209, 568}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -1140,7 +1161,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>57</string>
 					<key>scrollViewOffset</key>
-					<string>{1, 1}</string>
+					<string>{0, 4}</string>
 				</dict>
 			</array>
 		</dict>
@@ -1159,13 +1180,13 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>4.5</real>
+							<real>0.0</real>
 						</dict>
 						<key>timescale</key>
 						<integer>60</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1967, 735}</string>
+					<string>{1209, 707}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -1190,7 +1211,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>68</string>
 					<key>scrollViewOffset</key>
-					<string>{494, 0}</string>
+					<string>{0, 3}</string>
 				</dict>
 			</array>
 		</dict>
@@ -1209,13 +1230,13 @@
 						<key>timeCursors</key>
 						<dict>
 							<key>kTimelineDefaultIdentifier</key>
-							<real>0.0</real>
+							<real>4.2333331108093262</real>
 						</dict>
 						<key>timescale</key>
 						<integer>60</integer>
 					</dict>
 					<key>canvasSize</key>
-					<string>{1497, 620}</string>
+					<string>{1217, 560}</string>
 					<key>hypeScene</key>
 					<dict>
 						<key>backgroundColor</key>
@@ -1240,7 +1261,7 @@
 					<key>rootSymbolControllerOid</key>
 					<string>86</string>
 					<key>scrollViewOffset</key>
-					<string>{9, 1}</string>
+					<string>{0, 0}</string>
 				</dict>
 			</array>
 		</dict>
@@ -1275,11 +1296,23 @@ function findName(hypeDocument, element, event) {
 // event - event that triggered this function being called
 function totalSlides(hypeDocument, element, event) {
 	
-// 		alert(hypeDocument.sceneNames().length);
-
 		var curNo = hypeDocument.sceneNames().length;
 		document.getElementById("totalNo").innerHTML=curNo;
+		
+		CurrentScene();
 
+	
+}
+</string>
+		</dict>
+		<dict>
+			<key>oid</key>
+			<string>98</string>
+			<key>source</key>
+			<string>// element - DOMHTMLElement that triggered this function being called
+// event - event that triggered this function being called
+function currentSlide(hypeDocument, element, event) {
+	CurrentScene()
 	
 }
 </string>
@@ -4138,9 +4171,7 @@ function totalSlides(hypeDocument, element, event) {
 			<key>documentIdentifier</key>
 			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
-			<array>
-				<string>54</string>
-			</array>
+			<array/>
 			<key>symbol</key>
 			<dict>
 				<key>addToNewSceneControllers</key>
@@ -5903,6 +5934,64 @@ function totalSlides(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
+								<real>4.5333333015441895</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>symbolOid</key>
+												<string>31</string>
+												<key>timelineIdentifier</key>
+												<string>kTimelineDefaultIdentifier</string>
+												<key>type</key>
+												<integer>7</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>identifier</key>
+								<string>ActionHandler</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>kTimelineDefaultIdentifier</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>javascriptOid</key>
+												<string>98</string>
+												<key>type</key>
+												<integer>4</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>2</integer>
+								<key>uuid</key>
+								<string>BA7F7852-3F6B-4F7C-8308-5CAA18A840F4-33834-0000B736CDF5582F</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
 								<real>2</real>
 								<key>endValue</key>
 								<dict>
@@ -6121,7 +6210,16 @@ function totalSlides(hypeDocument, element, event) {
 									<dict>
 										<key>actions</key>
 										<array>
-											<dict/>
+											<dict>
+												<key>duration</key>
+												<real>1.1000000000000001</real>
+												<key>sceneOid</key>
+												<string>74</string>
+												<key>transition</key>
+												<integer>1</integer>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
 										</array>
 									</dict>
 								</dict>
@@ -7900,6 +7998,66 @@ function totalSlides(hypeDocument, element, event) {
 							</dict>
 							<dict>
 								<key>duration</key>
+								<real>4.5</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>duration</key>
+												<real>1.1000000000000001</real>
+												<key>sceneOid</key>
+												<string>67</string>
+												<key>transition</key>
+												<integer>1</integer>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>identifier</key>
+								<string>ActionHandler</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>kTimelineDefaultIdentifier</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>javascriptOid</key>
+												<string>98</string>
+												<key>type</key>
+												<integer>4</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>2</integer>
+								<key>uuid</key>
+								<string>366A6E82-83F9-4287-A7FF-C602854C3542-33834-0000B9B2249E26EA</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
 								<real>1</real>
 								<key>endValue</key>
 								<dict>
@@ -8141,7 +8299,7 @@ function totalSlides(hypeDocument, element, event) {
 								<key>uuid</key>
 								<string>B36EC144-8DA1-4105-8329-E3C9574D71BA-5588-0001327428AD662F</string>
 								<key>zIndex</key>
-								<integer>1</integer>
+								<integer>2</integer>
 							</dict>
 							<dict>
 								<key>duration</key>
@@ -8195,9 +8353,7 @@ function totalSlides(hypeDocument, element, event) {
 			<key>documentIdentifier</key>
 			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
-			<array>
-				<string>71</string>
-			</array>
+			<array/>
 			<key>symbol</key>
 			<dict>
 				<key>addToNewSceneControllers</key>
@@ -8975,6 +9131,66 @@ function totalSlides(hypeDocument, element, event) {
 						<array>
 							<dict>
 								<key>duration</key>
+								<real>4.5</real>
+								<key>endValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>duration</key>
+												<real>1.1000000000000001</real>
+												<key>sceneOid</key>
+												<string>85</string>
+												<key>transition</key>
+												<integer>2</integer>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>identifier</key>
+								<string>ActionHandler</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>kTimelineDefaultIdentifier</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>javascriptOid</key>
+												<string>98</string>
+												<key>type</key>
+												<integer>4</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>2</integer>
+								<key>uuid</key>
+								<string>25E85ACF-AE07-4362-907D-CD93512E407D-33834-0000B9B46EA7695B</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+							<dict>
+								<key>duration</key>
 								<real>3</real>
 								<key>identifier</key>
 								<string>ActionHandler</string>
@@ -9195,7 +9411,9 @@ function totalSlides(hypeDocument, element, event) {
 			<key>documentIdentifier</key>
 			<string>3813D849-CFF6-430B-9243-D36D1DD991F1-33834-00007069DC14918D</string>
 			<key>selectedObjects</key>
-			<array/>
+			<array>
+				<string>81</string>
+			</array>
 			<key>symbol</key>
 			<dict>
 				<key>addToNewSceneControllers</key>
@@ -10688,6 +10906,45 @@ function totalSlides(hypeDocument, element, event) {
 								<key>zIndex</key>
 								<integer>1</integer>
 							</dict>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ActionHandler</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>kTimelineDefaultIdentifier</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>javascriptOid</key>
+												<string>98</string>
+												<key>type</key>
+												<integer>4</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>2</integer>
+								<key>uuid</key>
+								<string>8141DC70-A740-4A64-9785-FA63B1A71296-33834-0000B98A1639A1DC</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
 						</array>
 						<key>firstKeyframeIsRelative</key>
 						<false/>
@@ -11107,7 +11364,47 @@ function totalSlides(hypeDocument, element, event) {
 				<array>
 					<dict>
 						<key>animations</key>
-						<array/>
+						<array>
+							<dict>
+								<key>duration</key>
+								<real>0.0</real>
+								<key>identifier</key>
+								<string>ActionHandler</string>
+								<key>isRelative</key>
+								<false/>
+								<key>referenceOid</key>
+								<string>kTimelineDefaultIdentifier</string>
+								<key>startTime</key>
+								<real>0.0</real>
+								<key>startValue</key>
+								<dict>
+									<key>identifier</key>
+									<string>ActionHandler</string>
+									<key>objectValue</key>
+									<dict>
+										<key>actions</key>
+										<array>
+											<dict>
+												<key>javascriptOid</key>
+												<string>98</string>
+												<key>type</key>
+												<integer>4</integer>
+											</dict>
+										</array>
+									</dict>
+								</dict>
+								<key>symbolElementActionAttributesBySymbolTimeline</key>
+								<dict/>
+								<key>timingFunctionOid</key>
+								<string>c</string>
+								<key>type</key>
+								<integer>2</integer>
+								<key>uuid</key>
+								<string>0D1FF98A-6D52-456C-B89B-5E3C90C32508-33834-0000C2A09A0971F0</string>
+								<key>zIndex</key>
+								<integer>1</integer>
+							</dict>
+						</array>
 						<key>firstKeyframeIsRelative</key>
 						<false/>
 						<key>framesPerSecond</key>

@@ -94,3 +94,36 @@ function testFunction() {
 }
 
 /// Right Slide Button
+
+
+//// Get Current Scene Index Number. Actioned triggered by function in each slide 
+var currSlide;
+var totalSlides;
+
+function CurrentScene() {
+    var array = document.getElementsByClassName("HYPE_scene");
+    totalSlides = array.length;
+    for (i = 0; i < array.length; i++) {
+        if (array[i].style.display === "block") {
+            currSlide = i + 1;
+            document.getElementById("currentNo").innerHTML = currSlide;
+        }
+    }
+    activateSlideBtns();
+}
+
+//// Activate or Deactivate left/right slide button
+function activateSlideBtns() {
+    if (currSlide >= 2) {
+        $("#backSlideBtn").addClass("slideBtnActivate")
+    } else {
+        $("#backSlideBtn").removeClass("slideBtnActivate")
+    }
+    if (currSlide == totalSlides) {
+        $("#forwardSlideBtn").removeClass("slideBtnActivate")
+        // Message: You have completed test
+    } else {
+        $("#forwardSlideBtn").addClass("slideBtnActivate")
+    }
+}
+activateSlideBtns();

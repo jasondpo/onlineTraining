@@ -372,11 +372,16 @@ label{
     z-index: 2;
     width: 100px;
     height: 20px;
-    background-color: #f90;
+    font-size: 14px;
+    letter-spacing: .01em;
+    color: var(--textSoft);
     top: 50%;
-    margin-top: -265px;
+    margin-top: -260px;
     left:50%;
     margin-left: -400px;   
+}
+.slideNumberClass{
+    font-weight: 600;
 }
 #header{
     position: fixed;
@@ -401,6 +406,7 @@ label{
     right: 50%;
     margin-right: -475px;
     background-image: url(../images/nextBtn.png);
+    background-position: bottom;
 }
 .slideBtnClass{
     position: absolute;
@@ -410,9 +416,13 @@ label{
     cursor: pointer;
     width: 50px;
     height: 20px;
-}
-.crossed{
     cursor: not-allowed;
+    /* pointer-events: none; */
+}
+.slideBtnActivate{
+    background-position: top !important;
+    cursor: pointer;
+    pointer-events: auto;
 }
 #currentTime{
     position: absolute;
@@ -486,13 +496,16 @@ label{
 /*--------------------------------------------------------------
 .XX RESPONSIVE 
 --------------------------------------------------------------*/
-@media all and (max-height:800px) {  
+@media all and (max-height:840px) {  
     #hypeContainer {
         margin-top: 100px;
     }
+    #slideNumber{
+        margin-top: -236px;  
+    }
 }
 
-@media all and (max-height:730px) {  
+@media all and (max-height:790px) {  
     #hypeContainer {
         margin-top: 50px;
     }
@@ -511,7 +524,10 @@ label{
     }
     #userRespons-container{
         top:170px;
-      }
+    }
+    #slideNumber{
+        margin-top: -260px;  
+    }
 }
 
 
