@@ -28,4 +28,10 @@
             class="hide">Log Out</button>
     </div>
 
+    <!-- This can be in main.php -->
+    <div id='test-completed-dialogueBox'>
+        Congratulations. You have completed the test.
+    </div>
+    <!-- This can be in main.php -->
+
     <div id='overlay'></div>

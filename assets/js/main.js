@@ -1,12 +1,14 @@
 // Admin ////
 $("#adminBtn").click(function () {
     $("#overlay").fadeIn("fast");
-    $("#signIn-conatainer-admin").delay(250).fadeIn("fast")
+    $("#signIn-conatainer-admin").delay(250).fadeIn("fast");
+    $("#test-completed-dialogueBox").fadeOut("fast");
 })
 
 $("#overlay, #closeAdminDialogueBox").click(function () {
     $("#overlay").delay(250).fadeOut("fast");
     $("#signIn-conatainer-admin").fadeOut("fast");
+    $("#test-completed-dialogueBox").fadeOut("fast");
 })
 
 //// Greetings ////
@@ -112,7 +114,7 @@ function CurrentScene() {
     activateSlideBtns();
 }
 
-//// Activate or Deactivate left/right slide button
+//// Activate or Deactivate left/right slide button. Open 'Test Completed'
 function activateSlideBtns() {
     if (currSlide >= 2) {
         $("#backSlideBtn").addClass("slideBtnActivate")
@@ -120,10 +122,12 @@ function activateSlideBtns() {
         $("#backSlideBtn").removeClass("slideBtnActivate")
     }
     if (currSlide == totalSlides) {
-        $("#forwardSlideBtn").removeClass("slideBtnActivate")
-        // Message: You have completed test
+        $("#forwardSlideBtn").removeClass("slideBtnActivate");
+        $("#overlay").delay(1000).fadeIn("fast");
+        $("#test-completed-dialogueBox").delay(1250).fadeIn("fast");
+        $(".hideAdminBtn").delay(1250).fadeIn("fast");
     } else {
-        $("#forwardSlideBtn").addClass("slideBtnActivate")
+        $("#forwardSlideBtn").addClass("slideBtnActivate");
     }
 }
-activateSlideBtns();
+// activateSlideBtns();

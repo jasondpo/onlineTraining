@@ -356,6 +356,66 @@ label{
 /*--------------------------------------------------------------
 .03 Main
 --------------------------------------------------------------*/
+
+#test-completed-dialogueBox{
+    position: relative;
+    width: 300px;
+    height: 340px;
+    z-index: 100;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 108px 20px 20px 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    background-image: url(../images/jcco_logo.png);
+    background-repeat: no-repeat;
+    background-position:center 16px;
+    display: none;
+}
+#test-completed-dialogueBox h4{
+    text-align: center;
+    padding-bottom: 10px;
+}
+#test-completed-dialogueBox button {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 14px 10px;
+    border-radius: 6px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    margin-right: 5%;
+}
+#test-completed-dialogueBox button:last-child{
+    margin-right: 0%;  
+}
+#test-completed-dialogueBox input[type=text], #test-completed-dialogueBox input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    color:var(--accent);
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+#test-completed-dialogueBox button:hover {
+    opacity: 0.8;
+}
+.hideAdminBtn{
+   display: none;
+   z-index: 100;
+   color: var(--grey); 
+}
+.hideAdminBtnDark{
+    color: var(--textSoft); 
+ }
+
+
+
+
+
+
+
 #hypeContainer {
     position: absolute;
     z-index: 1;

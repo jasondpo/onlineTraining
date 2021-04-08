@@ -37,7 +37,7 @@
 
     <div id='currentTime'></div>
 
-    <h3 id="adminBtn">Admin</h3>
+    <h3 id="adminBtn" class="hideAdminBtn">Admin</h3>
 
     <script>
         if (localStorage.firstName == undefined) {
