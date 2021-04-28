@@ -1,5 +1,5 @@
 <?php include "includes/header.php"; ?>
-    
+
     <div id='header'>
         <h1>JCCO <span>Online Training System (Beta)</span></h1>
         <h2><span id="greet"></span><span id="name"></span></h2>
@@ -12,28 +12,63 @@
         </ul>
         <div id='triangleUp'></div>
     </div>
-    
-<div id='slideNumber'>
-    Question <span id="currentNo" class="slideNumberClass"></span> of <span id="totalNo" class="slideNumberClass"></span>
-</div>
 
-    <div id="hypeContainer">
-        <!-- copy these lines to your document: -->
-        <div id="laurenmichael_hype_container" class="HYPE_document"
-            style="margin:auto;position:relative;width:800px;height:520px;overflow:hidden;">
-            <script type="text/javascript" charset="utf-8"
-                src="Lauren_Michael.hyperesources/laurenmichael_hype_generated_script.js?76542">
-            </script>
+    <!-- Pop Up Box STARTS -->
+    <div id='popUpBoxContainer'>
+        <div id='popUpBox'>
+
+            <div id='slidePopUpNumber'>
+                Slide <span id="currentPopUpNo" class="slideNumberClass"></span> of <span id="totalPopUpNo"
+                    class="slideNumberClass"></span>
+            </div>
+
+            <div id='closePopUpBox'></div>
+            <div id='bkdSlideBtn' class="slidePopBtnClass">Back</div>
+            <div id='fwdSlideBtn' class="slidePopBtnClass">Next</div>
         </div>
-        <!-- end copy -->
+    </div>
+    <!-- Pop Up Box ENDS -->
+
+
+    <!-- Video STARTS -->
+    <div id='closeVideo'></div>
+    <div class='c-video'>
+        <video class="video" src="video/video.mp4" muted></video>
+        <div class='controls'>
+            <div class="timeline-bar-container">
+                <div class="video-timeline-bar"></div>
+            </div>
+            <div class="buttons">
+                <button id="play-pause"></button>
+                <button id="stop-video"></button>
+                <button id="rewind"><i class="fas fa-backward"></i></button>
+                <button id="fast-forward"><i class="fas fa-forward"></i></button>
+                <button id="audio"><i class="fas fa-volume-mute"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- Video ENDS -->
+
+    <div id='slideNumber'>
+        Question <span id="currentNo" class="slideNumberClass"></span> of <span id="totalNo"
+            class="slideNumberClass"></span>
+    </div>
+    <div id='hypeContainer'>
+        <div id='illustrationBox' class="hide">
+            <div id='illoBtnExpand' class="hide">
+                <i class="fas fa-expand"></i>
+            </div>
+            <div id='videoPlayBtnPoster' class="hide">
+                <i class="fas fa-play"></i>
+            </div>
+        </div>
+        <div id='questionBox'></div>
+        <div id='checkBox-container'>
+            <ul id="ansList"></ul>
+        </div>
     </div>
 
-    <div id='backSlideBtn' class="slideBtnClass" onclick ="HYPE.documents['Lauren_Michael'].showPreviousScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
-
-    </div>
-    <div id='forwardSlideBtn' class="slideBtnClass" onclick ="HYPE.documents['Lauren_Michael'].showNextScene(HYPE.documents['Lauren_Michael'].kSceneTransitionCrossfade);">
-
-    </div>
+    <div id='forwardSlideBtn' class="slideBtnClass"></div>
 
     <div id='currentTime'></div>
 
@@ -47,4 +82,7 @@
        
     </script>
 
-<?php include "includes/footer.php"; ?>
+    <?php include "includes/footer.php"; ?>
+
+
+

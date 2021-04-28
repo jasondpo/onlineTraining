@@ -31,7 +31,9 @@
         <option value="position">Position</option>
     </select><br>
 
-    Waiting on server...
+    <!-- <div id='' class="alert alert-danger">
+         Waiting on server...
+    </div> -->
 </div>
 
 <?php include "includes/footer.php"; ?>

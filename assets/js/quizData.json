@@ -1,0 +1,95 @@
+{
+    "slide": [
+        {
+            "type": "popUp",
+            "question": "How big are your hands?",
+            "link": "images/quizIllo_1.png",
+            "slides": [
+                "images/slides/dealers.jpg",
+                "images/slides/downtown_branch.jpg",
+                "images/slides/libertyCenter.jpg",
+                "images/slides/downtown_branch.jpg"
+            ],
+            "correctAns": "ans3",
+            "ans": [
+                "Slide1: I am the first question",
+                "Slide1: I am the second question",
+                "Slide1: I am the third question",
+                "Slide1: I am the fourth question"
+            ]
+        },
+        {
+            "type": "popUp",
+            "question": "How big is your SUV?",
+            "link": "images/quizIllo_1.png",
+            "slides": [
+                "images/slides/posing.jpg",
+                "images/slides/demonstration.jpg",
+                "images/slides/statue.jpg"
+            ],
+            "correctAns": "ans2",
+            "ans": [
+                "Slide2: I am the first question",
+                "Slide2: I am the second question",
+                "Slide2: I am the third question",
+                "Slide2: I am the fourth question"
+            ]
+        },
+        {
+            "type": "video",
+            "question": "Debbie asks Bob, 'How big are your feet?' Bob knows Debbie is a tease. What should Bob do?",
+            "link": "images/quizIllo_1.png",
+            "slides": [],
+            "correctAns": "ans4",
+            "ans": [
+                "Tell her he wears a size 11",
+                "Give Debbie his phone number",
+                "Take her into the nearest closet and get busy",
+                "Kiss her right there"
+            ]
+        },
+        {
+            "type": "popUp",
+            "question": "Second batch of images. Index 3. Guy showing off epollBooks.",
+            "link": "images/quizIllo_1.png",
+            "slides": [
+                "images/slides/demonstration.jpg",
+                "images/slides/posing.jpg",
+                "images/slides/statue.jpg"
+            ],
+            "correctAns": "ans1",
+            "ans": [
+                "Slide4: I am the first question",
+                "Slide4: I am the second question",
+                "Slide4: I am the third question",
+                "Slide4: I am the fourth question"
+            ]
+        },
+        {
+            "type": "basic",
+            "question": "Krish",
+            "link": "images/quizIllo_1.png",
+            "slides": [],
+            "correctAns": "ans2",
+            "ans": [
+                "Slide5: I am the first question",
+                "Slide5: I am the second question",
+                "Slide5: I am the third question",
+                "Slide5: I am the fourth question"
+            ]
+        },
+        {
+            "type": "basic",
+            "question": "Just another question",
+            "link": "images/quizIllo_1.png",
+            "slides": [],
+            "correctAns": "ans2",
+            "ans": [
+                "Slide6: I am the first question",
+                "Slide6: I am the second question",
+                "Slide6: I am the third question",
+                "Slide6: I am the fourth question"
+            ]
+        }
+    ]
+}

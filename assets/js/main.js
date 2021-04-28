@@ -1,72 +1,166 @@
-// Admin ////
-$("#adminBtn").click(function () {
-    $("#overlay").fadeIn("fast");
-    $("#signIn-conatainer-admin").delay(250).fadeIn("fast");
-    $("#test-completed-dialogueBox").fadeOut("fast");
-})
+/*--------------------------------------------------------------
+DIRECTORY
+	
+.01 Fill in Divs / GetJSON
 
-$("#overlay, #closeAdminDialogueBox").click(function () {
-    $("#overlay").delay(250).fadeOut("fast");
-    $("#signIn-conatainer-admin").fadeOut("fast");
-    $("#test-completed-dialogueBox").fadeOut("fast");
-})
+.02 When user clicks an option/answer
 
-//// Greetings ////
-d = new Date();
-currtime = d.getHours() * 100 + d.getMinutes();
+.03 Next slide button
 
-if (currtime > 1199 && currtime < 1800) {
-    document.querySelector('#greet').innerHTML = 'Good afternoon, ';
-} if (currtime > 1799 && currtime < 2399) {
-    document.querySelector('#greet').innerHTML = 'Good evening, ';
-} if (currtime > 0 && currtime < 1200) {
-    document.querySelector('#greet').innerHTML = 'Good morning, ';
-}
+.04 Configure layout of test based on type
 
+.05 Greetings 
 
-//// Log in employee ////
-var fname = "";
-var lname = "";
-var deptSelect = "";
-var positionSelect = "";
+.06 Current Time
 
-function checkform() {
-    fname = $("#fname").val();
-    lname = $("#lname").val();
-    deptSelect = $('#deptSelect :selected').val();
-    positionSelect = $('#positionSelect :selected').val();
-    if (fname.length > 1 && lname.length > 1 && deptSelect != "" && positionSelect != "") {
-        $("#beginBtn").html('<i class="fas fa-lock-open"></i> &nbsp;&nbsp;Start');
-        $("#beginBtnLink").removeClass('beginBtnLink');
-        $("#beginBtn").addClass('beginBtnActive');
-        saveLocalStorage();
+.07 Logout Dropdown
+
+.08 Admin / Overlay
+--------------------------------------------------------------*/	
+
+/*--------------------------------------------------------------
+.01 Fill in Divs / GetJSON
+--------------------------------------------------------------*/
+var questionNumber = 0;
+var correctAns = "";
+var text = "";
+var quizLength;
+var i;
+let currNo;
+
+// Fill in DIVs
+    function startTest() {
+        text = "";
+        $.getJSON('assets/js/quizData.json', function (data) {
+            var totalChoices = data.slide[questionNumber].ans.length;
+            var testType = data.slide[questionNumber].type;
+            quizLength = data.slide.length;
+            correctAns = data.slide[questionNumber].correctAns;
+            // Loop Through Answers
+            for (i = 0; i < totalChoices; i++) {
+                text += "<li id='ans" + (i + 1) + "'class='multipleChoiceAns'>" + data.slide[questionNumber].ans[i] + "</li>";
+            }
+            // Output Answers
+            document.getElementById("ansList").innerHTML = text;
+            // Question
+            $('#questionBox').html(data.slide[questionNumber].question);
+            // Illustration
+            $('#illustrationBox').css("background-image", "url(assets/" + data.slide[questionNumber].link + ")");
+            // Current slide number
+            $("#currentNo").html(questionNumber + 1);
+            // Total slides number
+            $("#totalNo").html(quizLength);
+            // Check test type
+            testLayout(testType);
+        });
+    }
+    startTest();   
+
+/*--------------------------------------------------------------
+.02 When user clicks an option/answer
+--------------------------------------------------------------*/
+$("body").on("click", ".multipleChoiceAns", function () {
+    if (this.id == correctAns) {
+        this.classList.add("rightAns");
     } else {
-        $("#beginBtn").html('<i class="fas fa-lock"></i> &nbsp;&nbsp;Start');
-        $("#beginBtnLink").addClass('beginBtnLink');
-        $("#beginBtn").removeClass('beginBtnActive');
-        localStorage.clear();
+        this.classList.add("wrongAns");
+        document.getElementById(correctAns).classList.add("rightAns");
+    }
+    $("#forwardSlideBtn").delay("750").fadeIn('slow');
+    disablePointerEvents();
+})
+
+
+// Disable pointer events after user makes a choice
+function disablePointerEvents() {
+    var disable = document.getElementsByClassName("multipleChoiceAns");
+    for (var i = 0; i < disable.length; i++) {
+        disable[i].classList.add("cursorOff");
     }
 }
 
-function saveLocalStorage() {
-    localStorage.firstName = fname;
-    localStorage.lasttName = lname;
-    localStorage.department = deptSelect;
-    localStorage.position = positionSelect;
-}
-
-//// Current Time
-var curTime = document.getElementById("currentTime");
-window.onload = displayClock();
-function displayClock() {
-    var currentTime = new Date().toLocaleTimeString();
-    if (curTime) {
-        curTime.innerHTML = currentTime;
+/*--------------------------------------------------------------
+.03 Next slide button
+--------------------------------------------------------------*/
+$("#forwardSlideBtn").click(function () {
+    questionNumber++;
+    if ((questionNumber + 1) > quizLength) {
+        $("#forwardSlideBtn").removeClass("slideBtnActivate");
+        $("#overlay").delay(1000).fadeIn("fast");
+        $("#test-completed-dialogueBox").delay(1250).fadeIn("fast");
+        $(".hideAdminBtn").delay(1250).fadeIn("fast");
+    } else {
+        $("#forwardSlideBtn").fadeOut('slow');
+        $("#hypeContainer").fadeOut("slow", function () {
+            startTest();
+            $("#hypeContainer").fadeIn("slow");
+        });
     }
-    setTimeout(displayClock, 1000);
+    window.questionNumber
+    exportCurrQuestion()
+})
+
+export function exportCurrQuestion() {
+    return questionNumber
 }
 
-//// Logout Dropdown
+/*--------------------------------------------------------------
+.04 Configure layout of test based on type
+--------------------------------------------------------------*/
+function testLayout(testType) {
+    resetLayout();
+    if (testType == "illustrated") {
+        $("#illustrationBox").removeClass("hide");
+        $("#questionBox").addClass("questionBoxNarrow");
+    }
+    if (testType == "video") {
+        $("#videoPlayBtnPoster, #illustrationBox").removeClass("hide");
+        $("#questionBox").addClass("questionBoxNarrow");
+    }
+    if (testType == "popUp") {
+        $("#illustrationBox").removeClass("hide");
+        $("#illoBtnExpand").removeClass("hide");
+        $("#questionBox").addClass("questionBoxNarrow");
+    }
+}
+
+function resetLayout() {
+    // Removes Play Button Poster
+    $("#videoPlayBtnPoster, #illustrationBox, #illoBtnExpand").addClass("hide");
+    // Extends Question Box to its original size
+    $("#questionBox").removeClass("questionBoxNarrow");
+}
+
+/*--------------------------------------------------------------
+.05 Greetings 
+--------------------------------------------------------------*/
+    var d = new Date();
+    var currtime = d.getHours() * 100 + d.getMinutes();
+    
+    if (currtime > 1199 && currtime < 1800) {
+        document.querySelector('#greet').innerHTML = 'Good afternoon, ';
+    } if (currtime > 1799 && currtime < 2399) {
+        document.querySelector('#greet').innerHTML = 'Good evening, ';
+    } if (currtime > 0 && currtime < 1200) {
+        document.querySelector('#greet').innerHTML = 'Good morning, ';
+    }
+
+/*--------------------------------------------------------------
+.06 Current Time
+--------------------------------------------------------------*/
+    var curTime = document.getElementById("currentTime");
+    window.onload = displayClock();
+    function displayClock() {
+        var currentTime = new Date().toLocaleTimeString();
+        if (curTime) {
+            curTime.innerHTML = currentTime;
+        }
+        setTimeout(displayClock, 1000);
+    }
+
+/*--------------------------------------------------------------
+.07 Logout Dropdown
+--------------------------------------------------------------*/
 $("#name").click(function () {
     $("#dropDown").toggle();
 })
@@ -88,46 +182,3 @@ $('#restart').click(function () {
     location.reload();
 });
 
-/// Score
-
-/// Test Function
-function testFunction() {
-    alert("I am the test function.")
-}
-
-/// Right Slide Button
-
-
-//// Get Current Scene Index Number. Actioned triggered by function in each slide 
-var currSlide;
-var totalSlides;
-
-function CurrentScene() {
-    var array = document.getElementsByClassName("HYPE_scene");
-    totalSlides = array.length;
-    for (i = 0; i < array.length; i++) {
-        if (array[i].style.display === "block") {
-            currSlide = i + 1;
-            document.getElementById("currentNo").innerHTML = currSlide;
-        }
-    }
-    activateSlideBtns();
-}
-
-//// Activate or Deactivate left/right slide button. Open 'Test Completed'
-function activateSlideBtns() {
-    if (currSlide >= 2) {
-        $("#backSlideBtn").addClass("slideBtnActivate")
-    } else {
-        $("#backSlideBtn").removeClass("slideBtnActivate")
-    }
-    if (currSlide == totalSlides) {
-        $("#forwardSlideBtn").removeClass("slideBtnActivate");
-        $("#overlay").delay(1000).fadeIn("fast");
-        $("#test-completed-dialogueBox").delay(1250).fadeIn("fast");
-        $(".hideAdminBtn").delay(1250).fadeIn("fast");
-    } else {
-        $("#forwardSlideBtn").addClass("slideBtnActivate");
-    }
-}
-// activateSlideBtns();

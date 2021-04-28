@@ -1,0 +1,12 @@
+:root {
+    --primary: #f2f4f9 !important;
+    --primaryHover: #dde1eb;
+    --accent: #16325C;
+    --highlight: #0DCAF2;
+    --grey: #DFDFDF;
+    --success: #139813;
+    --successHover: #19b119;
+    --white: #FFFFFF;
+    --textSoft: #969EB1;
+    --rule:#DDD;
+}

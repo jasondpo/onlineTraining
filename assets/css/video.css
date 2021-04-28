@@ -1,0 +1,133 @@
+@import "colors.css";
+
+.c-video{
+    display: none;
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    z-index: 999;
+    overflow: hidden;
+}
+.video{
+    width: 100%;
+}
+#videoPlayBtnPoster{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    padding-left: 4px;
+    color: white;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    opacity: .7;
+    cursor: pointer;
+    transition: all .1s linear;
+}
+#videoPlayBtnPoster:hover{
+    background-color: #00ADEF;  
+}
+.controls{
+    display:flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.7);
+    transform: translateY(100%) translateY(-5px);
+    transition: all .2s;
+}
+.c-video:hover .controls{
+    transform: translateY(0);
+}
+.buttons{
+    padding: 10px;
+}
+.buttons button{
+    background:  none;
+    border:0;
+    outline: 0;
+    cursor: pointer;
+}
+.buttons #play-pause::before{
+    content: '\f144';
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+.buttons #play-pause.play:before{
+    content: '\f144';
+}
+.buttons #play-pause.pause:before{
+    content: '\f28b';
+}
+.buttons #stop-video::before{
+    content: '\f28d';
+    font-family: 'Font Awesome 5 Free';
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+.buttons #fast-forward{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 24px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+.buttons #rewind{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 24px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+.buttons #audio{
+    font-size: 24px;
+    color: white;
+    -webkit-font-smoothing: antialiased;  
+}
+.timeline-bar-container{
+    height: 10px;
+    top:0;
+    left:0;
+    width: 100%;
+    background-color:black;
+}
+.video-timeline-bar{
+    height: 10px;
+    background-color: var(--highlight);
+    width: 0%;
+}
+#closeVideo{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+    border:2px solid var(--white);
+    right: 50%;
+    top:50%;
+    margin-top:-245px;
+    margin-right: -410px;
+    background-image: url(../images/icon_close.png);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
